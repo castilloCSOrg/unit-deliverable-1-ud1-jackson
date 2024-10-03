@@ -25,7 +25,10 @@ public class Main
   public static void main(String[] args)
   {
     /***** DECLARATION SECTION *****/
-
+   double discount = 47;
+   double itemPrice = 50;
+   double result = discountPrice(discount,itemPrice);
+  
     /***** INITIALIZATION SECTION *****/
 
     /***** INTRO SECTION *****/
@@ -33,7 +36,13 @@ public class Main
     /***** PROCESSING SECTION *****/
 
     /***** OUTPUT SECTION *****/
-    
+    System.out.println("if your item cost $" + itemPrice + " and you have a discount of %" + discount + " you will be saving $" + result + "making your overall price $" + (itemPrice - result));
   }
   /***** STATIC METHODS *****/
+  public static double discountPrice(double num1, double num2)
+  {
+    double numDisc = num1 / 100;
+    double priceOff = num2 * numDisc;
+    return priceOff;
+  }
 }
