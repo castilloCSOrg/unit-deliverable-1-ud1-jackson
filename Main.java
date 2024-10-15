@@ -32,10 +32,13 @@ public class Main
   {
     /***** DECLARATION SECTION *****/
     double discount, itemPrice;
+    String member, casual;
     
     /***** INITIALIZATION SECTION *****/
     discount = UtilityBelt.readDouble("Discount %: ", 1, 9999);  // Read discount percentage
     itemPrice = UtilityBelt.readDouble("Item's Price: ", 1, 9999);  // Read item price
+    member = char UtilityBelt.readChar("Are you a member? (Y/N) ", "y", "n", "N", "Y");
+    
     
     /***** PROCESSING SECTION *****/
     double result = discountPrice(discount, itemPrice);  // Calculate the discount amount
@@ -51,4 +54,5 @@ public class Main
     double priceOff = price * discountRate;
     return priceOff;
   }
+
 }
