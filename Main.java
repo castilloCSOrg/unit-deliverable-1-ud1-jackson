@@ -31,28 +31,24 @@ public class Main
   public static void main(String[] args)
   {
     /***** DECLARATION SECTION *****/
-    double discount, itemPrice;
-    String member, casual;
+    double waterIntake;
+
     
     /***** INITIALIZATION SECTION *****/
-    discount = UtilityBelt.readDouble("Discount %: ", 1, 9999);  // Read discount percentage
-    itemPrice = UtilityBelt.readDouble("Item's Price: ", 1, 9999);  // Read item price
-    member = char UtilityBelt.readChar("Are you a member? (Y/N) ", "y", "n", "N", "Y");
+    int weight = UtilityBelt.readInt("What is your Weight? (lbs): " , 1, 600);
+    int activityLevel = UtilityBelt.readInt("Enter your Activity Level (1-3)? \n(1)Very Actice \n(2)Active  \n(3)Not Active \n: ", 1, 3);
+    int tempature = UtilityBelt.readInt("What is the tempature outside? (F): ", 1, 9999);
+  
+  
     
     
     /***** PROCESSING SECTION *****/
-    double result = discountPrice(discount, itemPrice);  // Calculate the discount amount
+    
   
     /***** OUTPUT SECTION *****/
-    System.out.printf("If your item costs $%5.2f and you have a discount of %.2f%%, you will be saving $%5.2f, making your overall price $%5.2f.\n",  itemPrice, discount, result, (itemPrice - result));
+    
   }
 
   /***** STATIC METHODS *****/
-  public static double discountPrice(double discount, double price)
-  {
-    double discountRate = discount / 100;
-    double priceOff = price * discountRate;
-    return priceOff;
-  }
-
+  
 }
